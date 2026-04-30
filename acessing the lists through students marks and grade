@@ -1,0 +1,16 @@
+names = ["Ram","raj","Rose","sai","jack"]
+marks = [[20,30,40],[40,50,60],[50,70,90],[90,70,60],[30,40,70]]
+pos = 1
+for i in range(5):
+  total_score = sum(marks[i])
+  if total_score > 100:
+    print("{} {} has scored {}%".format(pos,names[i],total_score))
+    pos +=1
+  if total_score >= 150:
+    print(f"{names[i]} Grade: A")
+  elif total_score >= 100:
+    print(f"{names[i]} Grade: B")
+  elif total_score >= 50:
+    print(f"{names[i]} Grade: C")
+  else:
+    print(f"{names[i]} Grade: D")
