@@ -1,0 +1,12 @@
+a = int(input("Enter no of teams: "))
+teams = []
+print("Enter all teams names: ")
+for i in range(a):
+  t = input("Enter team name: ")
+  teams.append(t)
+m = int(input("Enter number of meet between the teams"))
+matches = []
+for i in range(0,a-1):
+  for j in range(i+1,a):
+    print(f"Match between {teams[i]} and {teams[j]}")
+    
