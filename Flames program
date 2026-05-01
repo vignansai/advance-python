@@ -1,0 +1,35 @@
+a = input("Enter the boy name: ")
+b = input("Enter the girl name: ")
+a1 = list(a)
+b1 = list(b)
+
+for i in range(len(a1)):
+  for j in range(len(b1)):
+    if a1[i] != '1' and b1[j] != '1' and a1[i] == b1[j]:
+      a1[i] = '1'
+      b1[j] = '1'  
+      break       
+print(a1)
+print(b1)
+cnt = 0
+for char_a in a1:
+  if char_a != '1':
+    cnt = cnt + 1
+for char_b in b1:
+  if char_b != '1':
+    cnt = cnt + 1
+print(cnt)
+
+index = 0
+res = list("FLAMES")
+
+for _ in range(5):
+  if not res: 
+    break
+  index = (index + (cnt - 1)) % len(res)
+  res.pop(index)
+
+if res:
+  print(res[0])
+else:
+  print("Could not determine FLAMES result.")
